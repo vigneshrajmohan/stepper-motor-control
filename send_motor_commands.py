@@ -5,7 +5,9 @@ with open("LumiAPI/motor1_angle.txt", 'r') as file:
     # Read the contents of the file
     file_contents = file.read()
 
-ser = serial.Serial('/dev/ttyACM0', 9600)  # Change 'COM3' to the name of your serial port
+port = '/dev/ttyACM0'
+
+ser = serial.Serial(port, 9600)  # Change 'COM3' to the name of your serial port
 file = open('data.txt', 'w')
 
 top_degree_lim = 180
