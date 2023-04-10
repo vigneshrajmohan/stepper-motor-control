@@ -10,9 +10,10 @@ file = open('data.txt', 'w')
 
 top_degree_lim = 180
 
+m1_pos = int(file_contents)
+
 def move_to(m1):
-        # Move the robot arm, first motor rotates the stem of the lamp to m1 degrees (0-180), second motor moves the shade up or down m2 degrees (0-650)
-        # Also note that m2 at position 300 is the potition where it looks at you face to face.
+        # Move the robot arm, first motor rotates the stem of the lamp to m1 degrees (0-180)
         if (m1 < 0 or m1 > top_degree_lim):
             return
         
